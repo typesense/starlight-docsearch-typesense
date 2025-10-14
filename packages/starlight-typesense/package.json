@@ -1,0 +1,31 @@
+{
+  "name": "starlight-typesense",
+  "version": "0.0.1",
+  "license": "MIT",
+  "description": "Integrate Typesense search into Starlight",
+  "author": "haydenhoang",
+  "type": "module",
+  "exports": {
+    ".": "./index.ts"
+  },
+  "devDependencies": {
+    "@astrojs/starlight": "^0.36.0",
+    "astro": "^5.14.4"
+  },
+  "peerDependencies": {
+    "@astrojs/starlight": ">=0.36"
+  },
+  "engines": {
+    "node": "^18.17.1 || ^20.3.0 || >=21.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "homepage": "https://github.com/haydenhoang/starlight-typesense",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/haydenhoang/starlight-typesense.git",
+    "directory": "packages/starlight-typesense"
+  },
+  "bugs": "https://github.com/haydenhoang/starlight-typesense/issues"
+}

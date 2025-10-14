@@ -1,0 +1,23 @@
+{
+  "name": "starlight-typesense-monorepo",
+  "version": "0.0.1",
+  "license": "MIT",
+  "description": "Integrate Typesense search into Starlight",
+  "author": "typesense",
+  "type": "module",
+  "engines": {
+    "node": "^18.17.1 || ^20.3.0 || >=21.0.0"
+  },
+  "packageManager": "pnpm@9.6.0",
+  "private": true,
+  "homepage": "https://github.com/typesense/starlight-typesense",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/typesense/starlight-typesense.git"
+  },
+  "bugs": "https://github.com/typesense/starlight-typesense/issues",
+  "workspaces": [
+    "docs",
+    "packages/*"
+  ]
+}
