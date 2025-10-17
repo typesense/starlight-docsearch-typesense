@@ -10,9 +10,11 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "scrape": "docker run -it --env-file=./.env -e \"CONFIG=$(cat docsearch.config.json | jq -r tostring)\" typesense/docsearch-scraper:0.11.0"
   },
   "dependencies": {
+    "@astrojs/sitemap": "^3.6.0",
     "@astrojs/starlight": "^0.36.0",
     "astro": "^5.14.4",
     "sharp": "^0.34.4",

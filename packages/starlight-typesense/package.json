@@ -3,10 +3,23 @@
   "version": "0.0.1",
   "license": "MIT",
   "description": "Integrate Typesense search into Starlight",
-  "author": "haydenhoang",
+  "author": "typesense",
   "type": "module",
   "exports": {
-    ".": "./index.ts"
+    ".": "./index.ts",
+    "./Search.astro": "./Search.astro",
+    "./schema": "./schema.ts"
+  },
+  "files": [
+    "index.ts",
+    "Search.astro",
+    "schema.ts",
+    "variables.css",
+    "virtual.d.ts"
+  ],
+  "dependencies": {
+    "typesense-docsearch.js": "^3.4.1",
+    "typesense-docsearch-css": "^0.4.1"
   },
   "devDependencies": {
     "@astrojs/starlight": "^0.36.0",
@@ -21,11 +34,11 @@
   "publishConfig": {
     "access": "public"
   },
-  "homepage": "https://github.com/haydenhoang/starlight-typesense",
+  "homepage": "https://github.com/typesense/starlight-typesense",
   "repository": {
     "type": "git",
-    "url": "https://github.com/haydenhoang/starlight-typesense.git",
+    "url": "https://github.com/typesense/starlight-typesense.git",
     "directory": "packages/starlight-typesense"
   },
-  "bugs": "https://github.com/haydenhoang/starlight-typesense/issues"
+  "bugs": "https://github.com/typesense/starlight-typesense/issues"
 }

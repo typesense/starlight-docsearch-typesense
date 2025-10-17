@@ -1,0 +1,21 @@
+{
+  "index_name": "starlight_typesense_docs",
+  "allowed_domains": ["192.168.1.178"],
+  "start_urls": [
+    {
+      "url": "http://192.168.1.178:4321/"
+    }
+  ],
+  "selectors": {
+    "default": {
+      "lvl0": ".main-pane h1",
+      "lvl1": ".main-pane h2",
+      "lvl2": ".main-pane h3",
+      "lvl3": ".main-pane h4",
+      "lvl4": ".main-pane h5",
+      "text": ".main-pane p, .main-pane ul li, .main-pane table tbody tr"
+    }
+  },
+  "strip_chars": " .,;:#",
+  "scrape_start_urls": false
+}

@@ -1,0 +1,87 @@
+---
+title: API Reference
+---
+
+# hello
+
+This section provides a detailed reference of the configuration options available for the `starlight-typesense` plugin.
+
+## Configuration Options
+
+The `starlight-typesense` plugin accepts a configuration object with the following options:
+
+```ts
+interface TypesenseConfig {
+  /** The URL of the Typesense server. */
+  serverUrl: string;
+  /** The API key for authenticating with the Typesense server. */
+  apiKey: string;
+  /** The name of the Typesense collection to use for indexing documents. */
+  collectionName?: string;
+  /** The fields to index in the Typesense collection. */
+  fields?: string[];
+  /** Whether to enable real-time indexing of documents. */
+  realTimeIndexing?: boolean;
+  /** Additional options to pass to the Typesense client. */
+  clientOptions?: Record<string, any>;
+}
+```
+
+### apiKey
+
+- **Type**: `string`
+- **Description**: The API key for authenticating with the Typesense server.
+- **Required**: Yes
+- **Example**: `'xyz'`
+
+### collectionName
+
+- **Type**: `string`
+- **Description**: The name of the Typesense collection to use for indexing documents.
+- **Required**: No
+- **Default**: `'documents'`
+- **Example**: `'my-docs'`
+
+### fields
+
+- **Type**: `string[]`
+- **Description**: The fields to index in the Typesense collection.
+- **Required**: No
+- **Default**: `['title', 'content', 'url']`
+- **Example**: `['title', 'body', 'tags']`
+
+### realTimeIndexing
+
+- **Type**: `boolean`
+- **Description**: Whether to enable real-time indexing of documents.
+- **Required**: No
+- **Default**: `true`
+- **Example**: `false`
+
+## Example Configuration
+
+Here is an example of how to configure the `starlight-typesense` plugin in your
+`astro.config.mjs` file:
+
+```js
+import starlight from '@astrojs/starlight';
+import { defineConfig } from 'astro/config';
+import starlightTypesense from 'starlight-typesense';
+export default defineConfig({
+  integrations: [
+    starlight({
+      plugins: [
+        starlightTypesense({
+          serverUrl: 'http://localhost:8108',
+          apiKey: 'xyz',
+          collectionName: 'my-docs',
+          fields: ['title', 'body', 'tags'],
+          realTimeIndexing: false,
+          clientOptions: { timeout: 5000 },
+        }),
+      ],
+      title: 'My Docs',
+    }),
+  ],
+});
+```
