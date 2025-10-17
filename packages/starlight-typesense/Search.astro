@@ -135,7 +135,7 @@ const docsearchTranslations: DocSearchTranslationProps = {
   import config from 'virtual:starlight/docsearch-config';
   import type typesenseDocsearch from 'typesense-docsearch.js';
 
-  class StarlightDocSearch extends HTMLElement {
+  class StarlightDocSearchTypesense extends HTMLElement {
     constructor() {
       super();
       window.addEventListener('DOMContentLoaded', async () => {
@@ -151,5 +151,5 @@ const docsearchTranslations: DocSearchTranslationProps = {
       });
     }
   }
-  customElements.define('sl-doc-search', StarlightDocSearch);
+  customElements.define('sl-doc-search', StarlightDocSearchTypesense);
 </script>

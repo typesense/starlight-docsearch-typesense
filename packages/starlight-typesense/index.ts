@@ -69,7 +69,9 @@ const nodeSchema = z
 /** DocSearch configuration options. */
 const DocSearchConfigSchema = z
   .object({
+    /** The name of the Typesense collection to search. If using typesense-docsearch-scraper, this must match the `index_name` in the docsearch scraper config file. */
     typesenseCollectionName: z.string(),
+    /** Configuration for connecting to a Typesense server or cluster. */
     typesenseServerConfig: z.object({
       apiKey: z.string(),
       nodes: z.array(nodeSchema),
@@ -88,6 +90,7 @@ const DocSearchConfigSchema = z
         .enum(['error', 'warn', 'info', 'debug', 'trace', 'silent'])
         .optional(),
     }),
+    /** Optional Typesense search parameters to pass to the Typesense DocSearch client. */
     typesenseSearchParameters: z.custom<SearchOptions>().optional(),
 
     // Optional DocSearch component config (only the serializable properties can be included here)
@@ -96,6 +99,8 @@ const DocSearchConfigSchema = z
      * @default false
      */
     disableUserPersonalization: z.boolean().optional(),
+    /** An optional initial query to populate the search box with on first render. */
+    initialQuery: z.string().optional(),
   })
   .strict()
   .or(
@@ -120,7 +125,7 @@ const DocSearchConfigSchema = z
          * @example
          * // astro.config.mjs
          * // ...
-         * starlightDocSearch({ clientOptionsModule: './src/config/docsearch.ts' }),
+         * starlightDocSearchTypesense({ clientOptionsModule: './src/config/docsearch.ts' }),
          * // ...
          *
          * // src/config/docsearch.ts

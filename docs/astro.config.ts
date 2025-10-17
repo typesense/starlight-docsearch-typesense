@@ -49,11 +49,11 @@ export default defineConfig({
       sidebar: [
         {
           label: 'Start Here',
-          items: ['getting-started'],
+          items: ['getting-started', 'configuration'],
         },
         {
-          label: 'API Reference',
-          items: ['api-reference'],
+          label: 'Resources',
+          items: ['resources'],
         },
       ],
       social: [
@@ -63,7 +63,7 @@ export default defineConfig({
           label: 'GitHub',
         },
       ],
-      title: 'starlight-typesense',
+      title: 'Starlight DocSearch Typesense',
     }),
     sitemap(),
   ],
