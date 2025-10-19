@@ -4,7 +4,8 @@ title: Typesense DocSearch Scraper
 
 import { Aside } from '@astrojs/starlight/components';
 
-The <a href='https://github.com/typesense/typesense-docsearch-scraper' target='_blank'> `typesense-docsearch-scraper`</a> is a web-scraper that scans your documentation site and indexes the content in Typesense. To set it up, follow the instructions in the <a href="https://typesense.org/docs/guide/docsearch.html#step-1-set-up-docsearch-scraper" target='_blank'>official Typesense Docs</a>.
+The <a href='https://github.com/typesense/typesense-docsearch-scraper' target='_blank'> `typesense-docsearch-scraper`</a> scans your documentation site and indexes its content into a Typesense collection, enabling fast, full-text search for your docs.
+You'll typically run it whenever you update your documentation content. To set it up, follow the instructions in the <a href="https://typesense.org/docs/guide/docsearch.html#step-1-set-up-docsearch-scraper" target='_blank'>official Typesense Docs</a>.
 
 ## DocSearch Scraper Config File
 
@@ -13,7 +14,7 @@ Here is the template for the Scraper Config File that you can quickly copy into 
 ```jsonc
 // docsearch.config.json
 {
-  "index_name": "YOUR_TYPESENSE_COLLECTION_NAME", // make sure this matches your `typesenseCollectionName` in `astro.config.ts`
+  "index_name": "YOUR_TYPESENSE_COLLECTION_NAME", // make sure this matches your `typesenseCollectionName` in `astro.config.ts`, the plugin uses it to query the same Typesense collection that the scraper indexes.
   "start_urls": [
     {
       "url": "YOUR_DOCUMENTATION_SITE_URL"
@@ -36,7 +37,7 @@ Here is the template for the Scraper Config File that you can quickly copy into 
 
 <Aside type="tip">
 
-If you are running Starlight site locally and you're using Docker to run the scraper, you'll need to change the `start_urls` to point to the Network IP address of your machine instead of `localhost` and add that IP address to `allowed_domains`. You can get this by passing the `--host` flag when starting your Starlight dev server, e.g., `npm run dev -- --host`.
+If you are running Starlight site locally and you're using Docker to run the scraper, update the `start_urls` to use your machine's **Network IP address** instead of `localhost`, and include that IP address in `allowed_domains`. You can find the IP by starting your Starlight dev server with `--host`, e.g. `npm run dev -- --host`.
 
 ```jsonc
 // docsearch.config.json
@@ -53,7 +54,7 @@ If you are running Starlight site locally and you're using Docker to run the scr
 
 </Aside>
 
-## Run the Scraper
+## Running the Scraper
 
 After completeing the steps in the <a href="https://typesense.org/docs/guide/docsearch.html#run-the-scraper" target='_blank'>official Typesense Docs</a>, add this script to your Starlight site's `package.json`:
 
@@ -71,3 +72,5 @@ You can then run the scraper with:
 ```bash
 npm run scrape # yarn, pnpm, bun equivalently
 ```
+
+Once the scraper finishes, your Typesense collection will be populated and ready to use with the Starlight Typesense plugin.
