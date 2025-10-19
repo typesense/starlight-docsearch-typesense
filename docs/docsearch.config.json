@@ -1,9 +1,9 @@
 {
   "index_name": "starlight_typesense_docs",
-  "allowed_domains": ["192.168.1.178"],
+  "allowed_domains": ["192.168.1.68"],
   "start_urls": [
     {
-      "url": "http://192.168.1.178:4321/"
+      "url": "http://192.168.1.68:4321/"
     }
   ],
   "selectors": {

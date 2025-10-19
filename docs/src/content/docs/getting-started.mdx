@@ -2,7 +2,8 @@
 title: Getting Started
 ---
 
-Integrate Typesense search into Starlight
+`starlight-docsearch-typesense` is a Starlight [plugin](https://starlight.astro.build/reference/plugins/) that integrates <a href="https://typesense.org/" target="_blank">Typesense</a>
+with the <a href="https://docsearch.algolia.com/" target="_blank">DocSearch</a> interface to provide lightning-fast, typo-tolerant search for your Starlight documentation site.
 
 ## Prerequisites
 
@@ -15,14 +16,14 @@ import { Steps, Tabs, TabItem } from '@astrojs/starlight/components';
 
 <Steps>
 
-1. `starlight-typesense` is a Starlight [plugin](https://starlight.astro.build/reference/plugins/). Install it by running the following command in your terminal:
+1. Install `starlight-docsearch-typesense` by running the following command in your terminal:
 
    <Tabs syncKey="pkg">
 
    <TabItem label="npm">
 
    ```sh
-   npm install starlight-typesense
+   npm install starlight-docsearch-typesense
    ```
 
    </TabItem>
@@ -30,7 +31,7 @@ import { Steps, Tabs, TabItem } from '@astrojs/starlight/components';
    <TabItem label="pnpm">
 
    ```sh
-   pnpm add starlight-typesense
+   pnpm add starlight-docsearch-typesense
    ```
 
    </TabItem>
@@ -38,7 +39,7 @@ import { Steps, Tabs, TabItem } from '@astrojs/starlight/components';
    <TabItem label="Yarn">
 
    ```sh
-   yarn add starlight-typesense
+   yarn add starlight-docsearch-typesense
    ```
 
    </TabItem>
@@ -46,7 +47,7 @@ import { Steps, Tabs, TabItem } from '@astrojs/starlight/components';
    <TabItem label="Bun">
 
    ```sh
-   bun i starlight-typesense
+   bun i starlight-docsearch-typesense
    ```
 
    </TabItem>
@@ -59,18 +60,17 @@ import { Steps, Tabs, TabItem } from '@astrojs/starlight/components';
    // astro.config.mjs
    import starlight from '@astrojs/starlight'
    import { defineConfig } from 'astro/config'
-   import starlightTypesense from 'starlight-typesense'
+   import starlightDocSearchTypesense from 'starlight-docsearch-typesense'
 
    export default defineConfig({
      integrations: [
         starlight({
           plugins: [
-          starlightTypesense({
+          starlightDocSearchTypesense({
             typesenseCollectionName: 'docs',
             typesenseServerConfig: {
               nodes: [{ url: 'http://localhost:8108' }],
               apiKey: 'xyz',
-              connectionTimeoutSeconds: 5,
             },
           }),
         ],

@@ -1,4 +1,4 @@
-# `starlight-typesense`
+# `starlight-docsearch-typesense`
 
 Integrate Typesense search into Starlight
 

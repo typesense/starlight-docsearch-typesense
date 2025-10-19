@@ -1,6 +1,6 @@
 import starlight from '@astrojs/starlight';
 import { defineConfig } from 'astro/config';
-import starlightTypesense from 'starlight-typesense';
+import starlightDocSearchTypesense from 'starlight-docsearch-typesense';
 
 import sitemap from '@astrojs/sitemap';
 
@@ -14,36 +14,22 @@ export default defineConfig({
           label: 'English',
           lang: 'en', // lang is required for root locales
         },
-
-        // Simplified Chinese docs in `src/content/docs/zh-cn/`
-        'zh-cn': {
-          label: '简体中文',
-          lang: 'zh-CN',
-        },
-        // Arabic docs in `src/content/docs/ar/`
-        ar: {
-          label: 'العربية',
-          dir: 'rtl',
+        vi: {
+          label: 'Tiếng Việt',
+          lang: 'vi',
         },
       },
       editLink: {
         baseUrl:
-          'https://github.com/typesense/starlight-typesense/edit/main/docs/',
+          'https://github.com/typesense/starlight-docsearch-typesense/edit/main/docs/',
       },
       plugins: [
-        starlightTypesense({
+        starlightDocSearchTypesense({
           typesenseCollectionName: 'starlight_typesense_docs',
           typesenseServerConfig: {
             nodes: [{ url: 'http://localhost:8108' }],
             apiKey: 'xyz',
-            connectionTimeoutSeconds: 2,
           },
-          // typesenseSearchParameters: {
-          //   query_by: 'title,content',
-          //   highlight_full_fields: 'title,content',
-          //   snippet_threshold: 0,
-          //   num_typos: 2,
-          // },
         }),
       ],
       sidebar: [
@@ -52,13 +38,17 @@ export default defineConfig({
           items: ['getting-started', 'configuration'],
         },
         {
+          label: 'Guides',
+          items: ['guides/typesense-docsearch-scraper'],
+        },
+        {
           label: 'Resources',
           items: ['resources'],
         },
       ],
       social: [
         {
-          href: 'https://github.com/typesense/starlight-typesense',
+          href: 'https://github.com/typesense/starlight-docsearch-typesense',
           icon: 'github',
           label: 'GitHub',
         },

@@ -5,12 +5,12 @@ import { fileURLToPath } from 'node:url';
 import { z } from 'astro/zod';
 import type docsearch from 'typesense-docsearch.js';
 
-export default function starlightTypesense(
+export default function starlightDocSearchTypesense(
   userConfig: DocSearchUserConfig
 ): StarlightPlugin {
   const opts = DocSearchConfigSchema.parse(userConfig);
   return {
-    name: 'starlight-typesense',
+    name: 'starlight-docsearch-typesense',
     hooks: {
       'config:setup'({ addIntegration, config, logger, updateConfig }) {
         // If the user has already has a custom override for the Search component, don't override it.
@@ -19,7 +19,7 @@ export default function starlightTypesense(
             'It looks like you already have a `Search` component override in your Starlight configuration.'
           );
           logger.warn(
-            'To render `starlight-typesense`, remove the override for the `Search` component.\n'
+            'To render `starlight-docsearch-typesense`, remove the override for the `Search` component.\n'
           );
         } else {
           // Otherwise, add the Search component override to the user's configuration.
@@ -27,7 +27,7 @@ export default function starlightTypesense(
             pagefind: false,
             components: {
               ...config.components,
-              Search: 'starlight-typesense/Search.astro',
+              Search: 'starlight-docsearch-typesense/Search.astro',
             },
           });
         }
@@ -78,7 +78,6 @@ const DocSearchConfigSchema = z
       randomizeNodes: z.boolean().optional(),
       nearestNode: nodeSchema.optional(),
       connectionTimeoutSeconds: z.number().optional(),
-      timeoutSeconds: z.number().optional(),
       healthcheckIntervalSeconds: z.number().optional(),
       numRetries: z.number().optional(),
       retryIntervalSeconds: z.number().optional(),
@@ -129,7 +128,7 @@ const DocSearchConfigSchema = z
          * // ...
          *
          * // src/config/docsearch.ts
-         * import type { DocSearchClientOptions } from 'starlight-typesense';
+         * import type { DocSearchClientOptions } from 'starlight-docsearch-typesense';
          *
          * export default {
          *   appId: '...',

@@ -1,14 +1,14 @@
-# `starlight-typesense` 🔋
+# `starlight-docsearch-typesense` 🔋
 
 Integrate Typesense search into Starlight
 
 ## Package
 
-If you are looking for the Starlight plugin package, you can find it in the [`packages/starlight-typesense/`](/packages/starlight-typesense/) directory.
+If you are looking for the Starlight plugin package, you can find it in the [`packages/starlight-docsearch-typesense/`](/packages/starlight-docsearch-typesense/) directory.
 
 ## Project structure
 
-This project uses pnpm workspaces to develop a single Starlight plugin from the `packages/starlight-typesense/` directory. A Starlight documentation site is also available in the `docs/` directory that is also used for testing and demonstrating the Starlight plugin.
+This project uses pnpm workspaces to develop a single Starlight plugin from the `packages/starlight-docsearch-typesense/` directory. A Starlight documentation site is also available in the `docs/` directory that is also used for testing and demonstrating the Starlight plugin.
 
 ## License
 

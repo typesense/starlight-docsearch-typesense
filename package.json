@@ -1,8 +1,8 @@
 {
-  "name": "starlight-typesense-monorepo",
+  "name": "starlight-docsearch-typesense-monorepo",
   "version": "0.0.1",
   "license": "MIT",
-  "description": "Integrate Typesense search into Starlight",
+  "description": "A Starlight plugin that adds DocSearch powered by Typesense for fast, typo-tolerant documentation search.",
   "author": "typesense",
   "type": "module",
   "engines": {
@@ -10,12 +10,12 @@
   },
   "packageManager": "pnpm@9.6.0",
   "private": true,
-  "homepage": "https://github.com/typesense/starlight-typesense",
+  "homepage": "https://github.com/typesense/starlight-docsearch-typesense",
   "repository": {
     "type": "git",
-    "url": "https://github.com/typesense/starlight-typesense.git"
+    "url": "https://github.com/typesense/starlight-docsearch-typesense.git"
   },
-  "bugs": "https://github.com/typesense/starlight-typesense/issues",
+  "bugs": "https://github.com/typesense/starlight-docsearch-typesense/issues",
   "workspaces": [
     "docs",
     "packages/*"

@@ -1,8 +1,8 @@
 {
-  "name": "starlight-typesense",
+  "name": "starlight-docsearch-typesense",
   "version": "0.0.1",
   "license": "MIT",
-  "description": "Integrate Typesense search into Starlight",
+  "description": "A Starlight plugin that adds DocSearch powered by Typesense for fast, typo-tolerant documentation search.",
   "author": "typesense",
   "type": "module",
   "exports": {
@@ -34,11 +34,11 @@
   "publishConfig": {
     "access": "public"
   },
-  "homepage": "https://github.com/typesense/starlight-typesense",
+  "homepage": "https://github.com/typesense/starlight-docsearch-typesense",
   "repository": {
     "type": "git",
-    "url": "https://github.com/typesense/starlight-typesense.git",
-    "directory": "packages/starlight-typesense"
+    "url": "https://github.com/typesense/starlight-docsearch-typesense.git",
+    "directory": "packages/starlight-docsearch-typesense"
   },
-  "bugs": "https://github.com/typesense/starlight-typesense/issues"
+  "bugs": "https://github.com/typesense/starlight-docsearch-typesense/issues"
 }

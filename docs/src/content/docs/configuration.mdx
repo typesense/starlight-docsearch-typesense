@@ -9,12 +9,12 @@ The Starlight Docsearch Typesense plugin is configured in your project's `astro.
 ```js
 import starlight from '@astrojs/starlight';
 import { defineConfig } from 'astro/config';
-import starlightTypesense from 'starlight-typesense';
+import starlightDocSearchTypesense from 'starlight-docsearch-typesense';
 export default defineConfig({
   integrations: [
     starlight({
       plugins: [
-        starlightTypesense({
+        starlightDocSearchTypesense({
           // Configuration options go here.
         }),
       ],
@@ -26,7 +26,7 @@ export default defineConfig({
 
 ## Configuration options
 
-You can pass the following options to `starlightTypesense()`:
+You can pass the following options to `starlightDocSearchTypesense()`:
 
 | Property                                                                      | Type&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Description                                                                                                                                                                                                                |
 | ----------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -45,7 +45,6 @@ You can pass the following options to `starlightTypesense()`:
 | **randomizeNodes**                                     | `boolean`                                                       | Randomizes the order of nodes for load balancing.                     |
 | **nearestNode**                                        | `Node`                                                          | The node geographically closest to the user, used for faster queries. |
 | **connectionTimeoutSeconds**                           | `number`                                                        | Connection timeout for API calls, in seconds.                         |
-| **timeoutSeconds**                                     | `number`                                                        | Request timeout for search operations, in seconds.                    |
 | **healthcheckIntervalSeconds**                         | `number`                                                        | Frequency to perform health checks for failed nodes.                  |
 | **numRetries**                                         | `number`                                                        | Number of retry attempts for failed requests.                         |
 | **retryIntervalSeconds**                               | `number`                                                        | Delay between retry attempts, in seconds.                             |
@@ -66,7 +65,7 @@ plugin.
 
    ```ts
    // src/config/docsearch.ts
-   import type { DocSearchClientOptions } from 'starlight-typesense';
+   import type { DocSearchClientOptions } from 'starlight-docsearch-typesense';
 
    export default {
      typesenseCollectionName: 'YOUR_COLLECTION_NAME',
@@ -87,14 +86,14 @@ plugin.
    // astro.config.mjs
    import { defineConfig } from 'astro/config';
    import starlight from '@astrojs/starlight';
-   import starlightTypesense from 'starlight-typesense';
+   import starlightDocSearchTypesense from 'starlight-docsearch-typesense';
 
    export default defineConfig({
      integrations: [
        starlight({
          title: 'Site with DocSearch',
          plugins: [
-           starlightTypesense({
+           starlightDocSearchTypesense({
              clientOptionsModule: './src/config/docsearch.ts',
            }),
          ],

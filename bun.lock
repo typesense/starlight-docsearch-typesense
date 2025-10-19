@@ -2,21 +2,21 @@
   "lockfileVersion": 1,
   "workspaces": {
     "": {
-      "name": "starlight-typesense-monorepo",
+      "name": "starlight-docsearch-typesense-monorepo",
     },
     "docs": {
-      "name": "starlight-typesense-docs",
+      "name": "starlight-docsearch-typesense-docs",
       "version": "0.0.1",
       "dependencies": {
         "@astrojs/sitemap": "^3.6.0",
         "@astrojs/starlight": "^0.36.0",
         "astro": "^5.14.4",
         "sharp": "^0.34.4",
-        "starlight-typesense": "workspace:*",
+        "starlight-docsearch-typesense": "workspace:*",
       },
     },
     "packages/starlight-typesense": {
-      "name": "starlight-typesense",
+      "name": "starlight-docsearch-typesense",
       "version": "0.0.1",
       "dependencies": {
         "typesense-docsearch-css": "^0.4.1",
@@ -872,9 +872,9 @@
 
     "space-separated-tokens": ["space-separated-tokens@2.0.2", "", {}, "sha512-PEGlAwrG8yXGXRjW32fGbg66JAlOAwbObuqVoJpv/mRgoWDQfgH1wDPvtzWyUSNAXBGSk8h755YDbbcEy3SH2Q=="],
 
-    "starlight-typesense": ["starlight-typesense@workspace:packages/starlight-typesense"],
+    "starlight-docsearch-typesense": ["starlight-docsearch-typesense@workspace:packages/starlight-typesense"],
 
-    "starlight-typesense-docs": ["starlight-typesense-docs@workspace:docs"],
+    "starlight-docsearch-typesense-docs": ["starlight-docsearch-typesense-docs@workspace:docs"],
 
     "stream-replace-string": ["stream-replace-string@2.0.0", "", {}, "sha512-TlnjJ1C0QrmxRNrON00JvaFFlNh5TTG00APw23j74ET7gkQpTASi6/L2fuiav8pzK715HXtUeClpBTw2NPSn6w=="],
 
