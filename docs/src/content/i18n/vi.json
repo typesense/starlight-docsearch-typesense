@@ -1,0 +1,31 @@
+{
+  "docsearch.searchBox.resetButtonTitle": "Xóa truy vấn",
+  "docsearch.searchBox.resetButtonAriaLabel": "Xóa truy vấn",
+  "docsearch.searchBox.cancelButtonText": "Hủy",
+  "docsearch.searchBox.cancelButtonAriaLabel": "Hủy",
+  "docsearch.searchBox.searchInputLabel": "Tìm kiếm",
+
+  "docsearch.startScreen.recentSearchesTitle": "Gần đây",
+  "docsearch.startScreen.noRecentSearchesText": "Chưa có tìm kiếm gần đây",
+  "docsearch.startScreen.saveRecentSearchButtonTitle": "Lưu tìm kiếm này",
+  "docsearch.startScreen.removeRecentSearchButtonTitle": "Xóa tìm kiếm này khỏi lịch sử",
+  "docsearch.startScreen.favoriteSearchesTitle": "Yêu thích",
+  "docsearch.startScreen.removeFavoriteSearchButtonTitle": "Xóa tìm kiếm này khỏi mục yêu thích",
+
+  "docsearch.errorScreen.titleText": "Không thể tải kết quả",
+  "docsearch.errorScreen.helpText": "Hãy kiểm tra lại kết nối mạng của bạn.",
+
+  "docsearch.footer.selectText": "để chọn",
+  "docsearch.footer.selectKeyAriaLabel": "Phím Enter",
+  "docsearch.footer.navigateText": "để di chuyển",
+  "docsearch.footer.navigateUpKeyAriaLabel": "Phím mũi tên lên",
+  "docsearch.footer.navigateDownKeyAriaLabel": "Phím mũi tên xuống",
+  "docsearch.footer.closeText": "để đóng",
+  "docsearch.footer.closeKeyAriaLabel": "Phím Escape",
+  "docsearch.footer.searchByText": "Tìm kiếm bởi",
+
+  "docsearch.noResultsScreen.noResultsText": "Không có kết quả cho",
+  "docsearch.noResultsScreen.suggestedQueryText": "Hãy thử tìm với từ khóa",
+  "docsearch.noResultsScreen.reportMissingResultsText": "Bạn nghĩ truy vấn này nên có kết quả?",
+  "docsearch.noResultsScreen.reportMissingResultsLinkText": "Hãy cho chúng tôi biết."
+}
