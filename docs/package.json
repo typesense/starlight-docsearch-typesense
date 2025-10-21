@@ -1,6 +1,6 @@
 {
   "name": "starlight-docsearch-typesense-docs",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "license": "MIT",
   "description": "Integrate Typesense search into Starlight",
   "author": "typesense",

@@ -1,6 +1,6 @@
 {
   "name": "starlight-docsearch-typesense",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "license": "MIT",
   "description": "A Starlight plugin that adds DocSearch powered by Typesense for fast, typo-tolerant documentation search.",
   "author": "typesense",
