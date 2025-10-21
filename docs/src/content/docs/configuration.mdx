@@ -38,21 +38,21 @@ You can pass the following options to `starlightDocSearchTypesense()`:
 
 ### `typesenseServerConfig`
 
-| Property                                               | Type                                                            | Description                                                           |
-| ------------------------------------------------------ | --------------------------------------------------------------- | --------------------------------------------------------------------- |
-| **apiKey** <Badge text='Required' variant='caution' /> | `string`                                                        | The API key used to authenticate with the Typesense server.           |
-| **nodes** <Badge text='Required' variant='caution' />  | `Array<Node>`                                                   | List of Typesense nodes.                                              |
-| **randomizeNodes**                                     | `boolean`                                                       | Randomizes the order of nodes for load balancing.                     |
-| **nearestNode**                                        | `Node`                                                          | The node geographically closest to the user, used for faster queries. |
-| **connectionTimeoutSeconds**                           | `number`                                                        | Connection timeout for API calls, in seconds.                         |
-| **healthcheckIntervalSeconds**                         | `number`                                                        | Frequency to perform health checks for failed nodes.                  |
-| **numRetries**                                         | `number`                                                        | Number of retry attempts for failed requests.                         |
-| **retryIntervalSeconds**                               | `number`                                                        | Delay between retry attempts, in seconds.                             |
-| **sendApiKeyAsQueryParam**                             | `boolean`                                                       | Sends the API key as a query parameter instead of a header.           |
-| **useServerSideSearchCache**                           | `boolean`                                                       | Enables the server-side search cache feature.                         |
-| **cacheSearchResultsForSeconds**                       | `number`                                                        | Duration to cache search results.                                     |
-| **additionalHeaders**                                  | `Record<string, string>`                                        | Custom HTTP headers to send with every request.                       |
-| **logLevel**                                           | `'error' \| 'warn' \| 'info' \| 'debug' \| 'trace' \| 'silent'` | Sets the verbosity level for client logs.                             |
+| Property                                               | Type                                                            | Description                                                                   |
+| ------------------------------------------------------ | --------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| **apiKey** <Badge text='Required' variant='caution' /> | `string`                                                        | The API key used to authenticate with the Typesense server.                   |
+| **nodes** <Badge text='Required' variant='caution' />  | `Array<Node>`                                                   | List of Typesense nodes.                                                      |
+| **randomizeNodes**                                     | `boolean`                                                       | Randomizes the order of nodes for load balancing.                             |
+| **nearestNode**                                        | `Node`                                                          | The node prioritized for making requests, usually the load-balanced endpoint. |
+| **connectionTimeoutSeconds**                           | `number`                                                        | Connection timeout for API calls, in seconds.                                 |
+| **healthcheckIntervalSeconds**                         | `number`                                                        | Frequency to perform health checks for failed nodes.                          |
+| **numRetries**                                         | `number`                                                        | Number of retry attempts for failed requests.                                 |
+| **retryIntervalSeconds**                               | `number`                                                        | Delay between retry attempts, in seconds.                                     |
+| **sendApiKeyAsQueryParam**                             | `boolean`                                                       | Sends the API key as a query parameter instead of a header.                   |
+| **useServerSideSearchCache**                           | `boolean`                                                       | Enables the server-side search cache feature.                                 |
+| **cacheSearchResultsForSeconds**                       | `number`                                                        | Duration to cache search results.                                             |
+| **additionalHeaders**                                  | `Record<string, string>`                                        | Custom HTTP headers to send with every request.                               |
+| **logLevel**                                           | `'error' \| 'warn' \| 'info' \| 'debug' \| 'trace' \| 'silent'` | Sets the verbosity level for client logs.                                     |
 
 ## Additional DocSearch options
 
