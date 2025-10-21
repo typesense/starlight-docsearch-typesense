@@ -1,12 +1,10 @@
-# `starlight-docsearch-typesense`
+# Starlight DocSearch Typesense 🌟🔎⚡️
 
-Integrate Typesense search into Starlight
+A Starlight plugin that integrates Typesense with the DocSearch interface to add lightning-fast, typo-tolerant search to your Starlight documentation site.
 
-## Documentation
+## Getting Started
 
-Want to get started immediately?
-
-Check out the `starlight-docsearch-typesense` getting started guide.
+Check out the getting started guide to add Typesense search to your Starlight site quickly.
 
 ## License
 
