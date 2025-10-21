@@ -51,12 +51,20 @@ export default function starlightDocSearchTypesense(
   };
 }
 
-export type DocSearchClientOptions = Omit<
+type DocSearchClientParams = Omit<
   Parameters<typeof docsearch>[0],
   'container' | 'translations'
 >;
 
+export type DocSearchClientOptions = Omit<
+  DocSearchClientParams,
+  'typesenseSearchParameters'
+> & {
+  typesenseSearchParameters?: DocSearchClientParams['typesenseSearchParameters'];
+};
+
 type SearchOptions = DocSearchClientOptions['typesenseSearchParameters'];
+
 const nodeSchema = z
   .object({
     host: z.string(),

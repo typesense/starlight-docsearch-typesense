@@ -23,11 +23,7 @@ export default defineConfig({
       },
       plugins: [
         starlightDocSearchTypesense({
-          typesenseCollectionName: 'starlight_typesense_docs',
-          typesenseServerConfig: {
-            nodes: [{ url: 'http://localhost:8108' }],
-            apiKey: 'xyz',
-          },
+          clientOptionsModule: './src/config/docsearch.ts',
         }),
       ],
       sidebar: [
