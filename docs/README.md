@@ -1,16 +1,6 @@
-# `starlight-docsearch-typesense`
+# Starlight Docsearch Typesense
 
-Integrate Typesense search into Starlight
-
-## Documentation
-
-Run the documentation locally by running the following command in your terminal:
-
-```shell
-pnpm run dev
-```
-
-Content can be found in the [`src/content/docs/`](./src/content/docs/) directory.
+Documentation site for the `starlight-docsearch-typesense` plugin, which also serves as a demo.
 
 ## License
 
