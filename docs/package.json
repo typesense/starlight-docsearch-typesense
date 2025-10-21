@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "license": "MIT",
   "description": "Integrate Typesense search into Starlight",
-  "author": "haydenhoang",
+  "author": "typesense",
   "type": "module",
   "scripts": {
     "dev": "astro dev",
@@ -14,7 +14,6 @@
     "scrape": "docker run -it --env-file=./.env -e \"CONFIG=$(cat docsearch.config.json | jq -r tostring)\" typesense/docsearch-scraper:latest"
   },
   "dependencies": {
-    "@astrojs/sitemap": "^3.6.0",
     "@astrojs/starlight": "^0.36.0",
     "astro": "^5.14.4",
     "sharp": "^0.34.4",
@@ -24,11 +23,11 @@
     "node": "^18.17.1 || ^20.3.0 || >=21.0.0"
   },
   "private": true,
-  "homepage": "https://github.com/haydenhoang/starlight-docsearch-typesense",
+  "homepage": "https://github.com/typesense/starlight-docsearch-typesense",
   "repository": {
     "type": "git",
-    "url": "https://github.com/haydenhoang/starlight-docsearch-typesense.git",
+    "url": "https://github.com/typesense/starlight-docsearch-typesense.git",
     "directory": "docs"
   },
-  "bugs": "https://github.com/haydenhoang/starlight-docsearch-typesense/issues"
+  "bugs": "https://github.com/typesense/starlight-docsearch-typesense/issues"
 }

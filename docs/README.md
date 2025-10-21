@@ -14,6 +14,6 @@ Content can be found in the [`src/content/docs/`](./src/content/docs/) directory
 
 ## License
 
-Licensed under the MIT License, Copyright © haydenhoang.
+Licensed under the MIT License, Copyright © Typesense.
 
 See [LICENSE](/LICENSE) for more information.

@@ -8,7 +8,6 @@
       "name": "starlight-docsearch-typesense-docs",
       "version": "0.0.1",
       "dependencies": {
-        "@astrojs/sitemap": "^3.6.0",
         "@astrojs/starlight": "^0.36.0",
         "astro": "^5.14.4",
         "sharp": "^0.34.4",

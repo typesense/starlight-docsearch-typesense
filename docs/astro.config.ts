@@ -2,12 +2,10 @@ import starlight from '@astrojs/starlight';
 import { defineConfig } from 'astro/config';
 import starlightDocSearchTypesense from 'starlight-docsearch-typesense';
 
-import sitemap from '@astrojs/sitemap';
-
 export default defineConfig({
-  site: 'http://192.168.1.178:4321',
   integrations: [
     starlight({
+      title: 'Starlight DocSearch Typesense',
       defaultLocale: 'root', // optional
       locales: {
         root: {
@@ -41,10 +39,6 @@ export default defineConfig({
           label: 'Guides',
           items: ['guides/typesense-docsearch-scraper'],
         },
-        {
-          label: 'Resources',
-          items: ['resources'],
-        },
       ],
       social: [
         {
@@ -53,8 +47,6 @@ export default defineConfig({
           label: 'GitHub',
         },
       ],
-      title: 'Starlight DocSearch Typesense',
     }),
-    sitemap(),
   ],
 });

@@ -1,17 +1,13 @@
-# `starlight-docsearch-typesense` 🔋
+# Starlight DocSearch Typesense 🌟🔎⚡️
 
-Integrate Typesense search into Starlight
+A Starlight plugin that integrates Typesense with the DocSearch interface to add lightning-fast, typo-tolerant search to your Starlight documentation site.
 
-## Package
+## Getting Started
 
-If you are looking for the Starlight plugin package, you can find it in the [`packages/starlight-docsearch-typesense/`](/packages/starlight-docsearch-typesense/) directory.
-
-## Project structure
-
-This project uses pnpm workspaces to develop a single Starlight plugin from the `packages/starlight-docsearch-typesense/` directory. A Starlight documentation site is also available in the `docs/` directory that is also used for testing and demonstrating the Starlight plugin.
+Check out the getting started guide to add Typesense search to your Starlight site quickly.
 
 ## License
 
-Licensed under the MIT License, Copyright © haydenhoang.
+Licensed under the MIT License, Copyright © Typesense.
 
 See [LICENSE](/LICENSE) for more information.
