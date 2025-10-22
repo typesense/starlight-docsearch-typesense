@@ -56,7 +56,11 @@ If you are running Starlight site locally and you're using Docker to run the scr
 
 ## Running the Scraper
 
-After completeing the steps in the <a href="https://typesense.org/docs/guide/docsearch.html#run-the-scraper" target='_blank'>official Typesense Docs</a>, add this script to your Starlight site's `package.json`:
+Here is how to run the Typesense DocSearch Scraper in your Starlight project.
+
+### Run the scraper locally
+
+After completing the steps in the <a href="https://typesense.org/docs/guide/docsearch.html#run-the-scraper" target='_blank'>official Typesense Docs</a>, add this script to your Starlight site's `package.json`:
 
 ```jsonc
 // package.json
@@ -71,6 +75,44 @@ You can then run the scraper with:
 
 ```bash
 npm run scrape # yarn, pnpm, bun equivalently
+```
+
+### Run the scraper in Github Actions
+
+Here is an example Github Actions workflow that runs the Typesense DocSearch Scraper whenever documentation content is updated in the `docs/src/content` folder:
+
+```yaml
+name: typesense-docsearch-scraper
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - 'docs/src/content/**'
+  workflow_dispatch:
+
+concurrency:
+  cancel-in-progress: true
+  group: ${{ github.workflow }}
+
+jobs:
+  scrape:
+    name: Scrape documentation and update Typesense
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Run DocSearch Scraper
+        uses: celsiusnarhwal/typesense-scraper@v2
+        with:
+          api-key: ${{ secrets.TYPESENSE_API_KEY }}
+          host: ${{ secrets.TYPESENSE_HOST }}
+          port: ${{ secrets.TYPESENSE_PORT }}
+          protocol: ${{ secrets.TYPESENSE_PROTOCOL }}
+
+          config: docs/docsearch.config.json
 ```
 
 Once the scraper finishes, your Typesense collection will be populated and ready to use with the Starlight Typesense plugin.
