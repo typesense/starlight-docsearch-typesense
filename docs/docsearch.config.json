@@ -1,9 +1,8 @@
 {
-  "index_name": "starlight_typesense_docs",
-  "allowed_domains": ["192.168.1.68"],
+  "index_name": "starlight_docsearch_typesense_docs",
   "start_urls": [
     {
-      "url": "http://192.168.1.68:4321/"
+      "url": "https://starlight-docsearch-typesense-docs.vercel.app/"
     }
   ],
   "selectors": {
