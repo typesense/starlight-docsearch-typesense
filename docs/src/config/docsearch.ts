@@ -5,9 +5,7 @@ export default {
   typesenseServerConfig: {
     nodes: [
       {
-        host: import.meta.env.PUBLIC_TYPESENSE_HOST || 'localhost',
-        port: import.meta.env.PUBLIC_TYPESENSE_PORT || 8108,
-        protocol: import.meta.env.PUBLIC_TYPESENSE_PROTOCOL || 'http',
+        url: import.meta.env.PUBLIC_TYPESENSE_URL || 'http://localhost:8108',
       },
     ],
     apiKey: import.meta.env.PUBLIC_TYPESENSE_SEARCH_ONLY_API_KEY || 'xyz',
