@@ -1,0 +1,32 @@
+name: typesense-docsearch-scraper
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'docs/src/content/**'
+
+  workflow_dispatch:
+
+concurrency:
+  cancel-in-progress: true
+  group: ${{ github.workflow }}
+
+jobs:
+  scrape:
+    name: Scrape documentation and update Typesense
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Run DocSearch Scraper
+        uses: celsiusnarhwal/typesense-scraper@v2
+        with:
+          api-key: ${{ secrets.TYPESENSE_API_KEY }}
+          host: ${{ secrets.TYPESENSE_HOST }}
+          port: ${{ secrets.TYPESENSE_PORT }}
+          protocol: ${{ secrets.TYPESENSE_PROTOCOL }}
+
+          config: docs/docsearch.config.json
