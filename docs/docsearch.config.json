@@ -1,5 +1,6 @@
 {
   "index_name": "starlight_docsearch_typesense_docs",
+  "index_name_tmp": "starlight_docsearch_typesense_docs_tmp",
   "start_urls": [
     {
       "url": "https://starlight-docsearch-typesense-docs.vercel.app/"
