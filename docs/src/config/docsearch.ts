@@ -4,10 +4,17 @@ export default {
   typesenseCollectionName: 'starlight_docsearch_typesense_docs',
   typesenseServerConfig: {
     nodes: [
-      {
-        url: import.meta.env.PUBLIC_TYPESENSE_URL || 'http://localhost:8108',
-      },
+      import.meta.env.PUBLIC_TYPESENSE_URLS
+        ? import.meta.env.PUBLIC_TYPESENSE_URLS.split(',').map(
+            (url: string) => ({
+              url,
+            })
+          )
+        : {
+            url: 'http://localhost:8108',
+          },
     ],
+    nearestNode: import.meta.env.PUBLIC_TYPESENSE_NEAREST_NODE_URL || undefined,
     apiKey: import.meta.env.PUBLIC_TYPESENSE_SEARCH_ONLY_API_KEY || 'xyz',
   },
   getMissingResultsUrl({ query }) {
