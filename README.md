@@ -10,7 +10,15 @@ A Starlight plugin that integrates Typesense with the DocSearch interface to add
 
 [**Starlight**](https://starlight.astro.build/) is a documentation framework built on Astro, focused on performance, accessibility, and customization. It helps developers create elegant, content-rich documentation sites with ease.
 
-Together, **Typesense**, **Starlight** and [**DocSearch**](https://github.com/algolia/docsearch) provide a seamless way to add powerful, blazingly-fast search to modern documentation websites.
+Together, **Typesense**, **Starlight** and [**DocSearch**](https://github.com/typesense/typesense-docsearch.js) provide a seamless way to add powerful, blazingly-fast search to modern documentation websites.
+
+## Indexing Your Documentation
+
+To power the search experience, you'll need to index your site's content into Typesense.
+
+The [`typesense-docsearch-scraper`](https://github.com/typesense/typesense-docsearch-scraper) is a crawler that scans your documentation pages, extracts structured content (like titles, headings, and paragraphs), and uploads it into your Typesense collection.
+
+You can run the scraper manually or automate it (e.g. via GitHub Actions) so that your search index stays up-to-date as your docs evolve.
 
 ## Getting Started
 
