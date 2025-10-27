@@ -19,7 +19,7 @@ export default defineConfig({
       },
       editLink: {
         baseUrl:
-          'https://github.com/typesense/starlight-docsearch-typesense/edit/main/docs/',
+          'https://github.com/typesense/starlight-docsearch-typesense/edit/master/docs/',
       },
       plugins: [
         starlightDocSearchTypesense({
